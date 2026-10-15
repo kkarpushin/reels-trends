@@ -8,13 +8,14 @@ Write the result as a JSON array to `{OUT}` with the Write tool (valid JSON, UTF
 
 - `code`: copy from input.
 - `relevant`: false only if the reel is not about the niche at all (the niche word is just a hashtag, an unrelated meme, news, a recipe) or if it advertises sexual services. Humour, products, DIY and behind-the-scenes content about the niche are relevant.
-- `flag`: null, or a short English reason when the reel is relevant but should not be copied as a format: "sexualised" (the main draw is a model's body or face as an object of attraction, or the account funnels to "exclusive content"), "repost" (clearly someone else's video re-uploaded), "scam" (fake news, miracle cures). Leave null in normal cases.
+- `flag`: null, or a short English reason when the reel is relevant but should not be copied as a format: "sexualised" (the main draw is a model's body or face as an object of attraction, or the account funnels to "exclusive content"), "repost" (someone else's video re-uploaded as the main content; a meme that adds its own joke over a short borrowed clip is not a repost), "scam" (fake news, miracle cures). Leave null in normal cases.
 - `format`: exactly one value from this list (the dominant one):
 {FORMATS}
 - `topic`: exactly one from: {TOPICS}
-- `creator`: one of: {CREATORS}
+  When two formats fit, pick by whose eyes we see: a visitor, blogger or customer walking through and reacting is "customer journey"; the business showing itself is "atmosphere and promo".
+- `creator`: one of: {CREATORS}. Accounts from outside the niche (realtors, agencies, freelancers who make content for businesses) count as media or other.
 - `speech`: one of: {SPEECH}
-- `hook_orig`: the hook of the first seconds in the original language: on-screen text from frame 1 if any, else the first spoken sentence, else the first line of the caption. Max 160 characters. Copy it exactly. If there is no text at all, write an empty string.
+- `hook_orig`: the hook of the first seconds in the original language: on-screen text from frame 1 if any, else the first spoken sentence, else the first line of the caption. If frame 1 shows only a fragment of word-by-word subtitles, use the first spoken sentence. Join multi-line overlays with a space; drop hashtags and @mentions from caption lines. Max 160 characters. Copy it exactly. If there is no text at all, write an empty string.
 - `hook_tr`: natural {LANG} translation of `hook_orig` (copy if already {LANG}). Max 160 characters.
 - `what`: one {LANG} sentence, max 20 words: what the viewer actually sees and hears.
 - `why`: one {LANG} phrase, max 15 words: the most likely reason it beat the author's usual views, tied to what you saw.
