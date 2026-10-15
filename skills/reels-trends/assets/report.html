@@ -1,0 +1,175 @@
+<title>__TITLE__</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: report column (~1080px). Summary first, then formats, topics and geography tables, a filterable 9:16 reel grid, then ideas, hooks, sound and method */
+:root{
+  --bg:#F0F4F2; --surface:#FFFFFF; --fg:#15211D; --muted:#56665F; --line:#D5DFDA;
+  --accent:#A8571A; --accent-soft:#F6E6D6; --leaf:#2C7462; --leaf-soft:#DCEEE7; --onaccent:#FFFFFF;
+  --f-display:"Unbounded","Golos Text",system-ui,sans-serif;
+  --f-body:"Golos Text",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E1513; --surface:#151F1C; --fg:#E4ECE8; --muted:#97A8A1; --line:#26332F;
+  --accent:#F0A260; --accent-soft:#3A2614; --leaf:#5FC6A8; --leaf-soft:#16302A; --onaccent:#1A0F05; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1513; --surface:#151F1C; --fg:#E4ECE8; --muted:#97A8A1; --line:#26332F;
+  --accent:#F0A260; --accent-soft:#3A2614; --leaf:#5FC6A8; --leaf-soft:#16302A; --onaccent:#1A0F05; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 var(--f-body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 64px}
+.wrap{max-width:1080px;margin:0 auto;display:grid;gap:56px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;letter-spacing:-.01em}
+h1{font-size:clamp(28px,5vw,46px);line-height:1.08;font-weight:700}
+h2{font-size:clamp(20px,3vw,26px);font-weight:700;margin-bottom:6px}
+h3{font-size:16px;font-weight:500}
+p{margin:0}
+.lede{max-width:65ch;color:var(--muted);font-size:17px}
+.eyebrow{font:600 12px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.meta{display:flex;flex-wrap:wrap;gap:8px 20px;font:13px/1.4 var(--f-mono);color:var(--muted)}
+.meta b{color:var(--fg);font-weight:600}
+header{display:grid;gap:18px}
+section{display:grid;gap:18px;min-width:0}
+.sub{color:var(--muted);max-width:70ch}
+.findings{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:14px}
+.finding{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;display:grid;gap:8px;align-content:start}
+.finding h3{font-family:var(--f-body);font-weight:600;font-size:16px}
+.finding p{color:var(--muted);font-size:15px}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:14px}
+th,td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:600 11px/1.2 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--bg)}
+tr:last-child td{border-bottom:0}
+td.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right}
+th.num{text-align:right}
+.barcell{width:24%}
+.bar{height:8px;border-radius:4px;background:var(--line);position:relative;margin-top:6px}
+.bar i{position:absolute;inset:0 auto 0 0;border-radius:4px;background:var(--accent)}
+.fname{font-weight:600}
+.fdesc{color:var(--muted);font-size:13px;margin-top:2px}
+.note{font-size:13px;color:var(--muted)}
+.ex a{font:12px var(--f-mono);color:var(--accent);margin-right:8px;white-space:nowrap}
+.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.controls label{font:12px var(--f-mono);color:var(--muted);margin-right:2px}
+.chip{font:500 13px var(--f-body);border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:999px;padding:6px 12px;cursor:pointer;max-width:100%}
+.chip[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.chip:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+select.chip{appearance:auto}
+.count{font:12px var(--f-mono);color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,200px),1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:grid;grid-template-rows:auto 1fr;color:inherit;text-decoration:none;min-width:0}
+.card:hover{border-color:var(--accent)}
+.thumb{aspect-ratio:9/16;max-height:300px;width:100%;max-width:100%;background:var(--line) center/cover no-repeat;position:relative}
+.xbadge{position:absolute;left:8px;top:8px;font:600 13px var(--f-mono);background:var(--accent);color:var(--onaccent);border-radius:6px;padding:3px 7px}
+.plays{position:absolute;left:8px;bottom:8px;font:600 13px var(--f-mono);color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.75)}
+.dur{position:absolute;right:8px;bottom:8px;font:12px var(--f-mono);color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.75)}
+.lang{position:absolute;right:8px;top:8px;font:600 11px var(--f-mono);background:rgba(0,0,0,.58);color:#fff;border-radius:4px;padding:2px 6px}
+.cbody{padding:12px 13px 14px;display:grid;gap:7px;align-content:start;min-width:0}
+.who{font:12px/1.3 var(--f-mono);color:var(--muted);overflow-wrap:anywhere}
+.hook{font-size:14px;line-height:1.4;overflow-wrap:anywhere}
+.orig{font-size:12px;line-height:1.35;color:var(--muted);overflow-wrap:anywhere}
+.tags{display:flex;flex-wrap:wrap;gap:5px}
+.tag{font:500 11px/1.2 var(--f-body);background:var(--leaf-soft);color:var(--leaf);border-radius:4px;padding:4px 6px}
+.tag.t{background:var(--accent-soft);color:var(--accent)}
+.tag.w{background:var(--fg);color:var(--bg)}
+.ideas{display:grid;gap:12px;counter-reset:idea}
+.idea{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;display:grid;grid-template-columns:auto 1fr;gap:4px 16px}
+.idea>*{grid-column:2;min-width:0}
+.idea::before{counter-increment:idea;content:counter(idea);grid-column:1;grid-row:1 / span 4;font:700 22px/1 var(--f-display);color:var(--accent);min-width:28px}
+.idea h3{font-family:var(--f-body);font-weight:600;font-size:16px}
+.idea .say{font-size:15px}
+.idea .say q{font-style:italic}
+.idea .why{color:var(--muted);font-size:14px}
+.idea .refs a{font:12px var(--f-mono);color:var(--accent);margin-right:10px}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:24px}
+.list{display:grid;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:10px;min-width:0}
+.li{display:flex;justify-content:space-between;gap:12px;padding:10px 14px;border-bottom:1px solid var(--line);font-size:14px;min-width:0}
+.li:last-child{border-bottom:0}
+.li span:first-child{min-width:0;overflow-wrap:anywhere}
+.li .n{font-family:var(--f-mono);color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+.quotes{display:grid;gap:12px}
+.quote{border-left:3px solid var(--accent);padding:4px 0 4px 14px;display:grid;gap:3px}
+.quote p{font-size:15px}
+.quote .o{font-size:13px;color:var(--muted)}
+.quote .src{font:12px var(--f-mono);color:var(--muted)}
+.quote a{color:inherit}
+.method{color:var(--muted);font-size:14px;display:grid;gap:8px;max-width:75ch}
+.method b{color:var(--fg)}
+.empty{color:var(--muted);font-size:14px;padding:12px 0}
+@media (prefers-reduced-motion:no-preference){.card{transition:border-color .15s}}
+</style>
+<div class="wrap" id="app"></div>
+<script id="data" type="application/json">__DATA__</script>
+<script>
+const D=JSON.parse(document.getElementById('data').textContent);
+const U=D.ui, LN=D.langNames, M=D.meta, app=document.getElementById('app');
+const num=(x,d)=>x.toFixed(d).replace('.',U.dec);
+const fmt=n=>n==null?U.na:n>=1e6?num(n/1e6,n>=1e7?0:1)+' '+U.m:n>=1e3?Math.round(n/1e3)+' '+U.k:String(Math.round(n));
+const fx=x=>x==null?'':'×'+(x>=10?Math.round(x):num(x,1));
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const reel=c=>`https://www.instagram.com/reel/${esc(c)}/`;
+const exl=a=>(a||[]).slice(0,3).map((c,i)=>`<a href="${reel(c)}" target="_blank" rel="noopener">${U.example} ${i+1} ↗</a>`).join('');
+let h=`<header>
+ <div class="eyebrow">${esc(M.eyebrow)}</div>
+ <h1>${esc(M.h1)}</h1>
+ <p class="lede">${esc(M.lede)}</p>
+ <div class="meta"><span>${U.period} <b>${esc(M.period)}</b></span><span>${U.reels} <b>${M.reels.toLocaleString(U.locale)}</b></span><span>${U.authors} <b>${M.authors.toLocaleString(U.locale)}</b></span><span>${U.langs} <b>${M.langs}</b></span><span>${U.plays} <b>${fmt(M.totalPlays)}</b></span><span>Apify <b>$${esc(M.spent)}</b></span></div>
+</header>
+<section><div><h2>${U.main}</h2></div><div class="findings">${D.findings.map(f=>`<div class="finding"><h3>${esc(f.title)}</h3><p>${esc(f.body)}</p></div>`).join('')}</div></section>`;
+if(D.formats.length){const maxX=Math.max(...D.formats.map(f=>f.medX||0))||1;
+h+=`<section><div><h2>${U.formats}</h2><p class="sub">${esc(M.formatsNote)}</p></div><div class="tbl"><table><thead><tr><th>${U.th_format}</th><th class="num">${U.th_n}</th><th class="num">${U.th_med}</th><th class="num">${U.th_x}</th><th class="barcell">${U.th_bar}</th></tr></thead><tbody>
+${D.formats.map(f=>`<tr><td><div class="fname">${esc(f.name)}</div><div class="fdesc">${esc(f.desc)}</div><div class="ex">${exl(f.examples)}</div></td><td class="num">${f.n}</td><td class="num">${fmt(f.medPlays)}</td><td class="num">${fx(f.medX)}</td><td class="barcell"><div class="bar"><i style="width:${Math.round(100*(f.medX||0)/maxX)}%"></i></div></td></tr>`).join('')}
+</tbody></table></div></section>`;}
+if(D.topics.length>1){
+h+=`<section><div><h2>${U.topics}</h2><p class="sub">${esc(M.topicsNote)}</p></div><div class="tbl"><table><thead><tr><th>${U.th_topic}</th><th class="num">${U.th_n}</th><th class="num">${U.th_med}</th><th class="num">${U.th_x}</th><th>${U.th_works}</th></tr></thead><tbody>
+${D.topics.map(t=>`<tr><td class="fname">${esc(t.name)}</td><td class="num">${t.n}</td><td class="num">${fmt(t.medPlays)}</td><td class="num">${fx(t.medX)}</td><td class="note">${esc(t.note||'')}</td></tr>`).join('')}
+</tbody></table></div></section>`;}
+if(D.langs.length>1||D.countries.length){
+h+=`<section><div><h2>${U.geo}</h2><p class="sub">${esc(M.geoNote)}</p></div>`;
+if(D.langs.length>1)h+=`<div class="tbl"><table><thead><tr><th>${U.th_lang}</th><th class="num">${U.th_n}</th><th class="num">${U.th_authors}</th><th class="num">${U.th_med}</th><th class="num">${U.th_x}</th><th class="num">${U.th_leaders}</th><th>${U.th_lang_note}</th></tr></thead><tbody>
+${D.langs.map(l=>`<tr><td class="fname">${esc(LN[l.code]||l.code)}</td><td class="num">${l.n}</td><td class="num">${l.authors}</td><td class="num">${fmt(l.medPlays)}</td><td class="num">${fx(l.medX)}</td><td class="num">${l.leaders||0}</td><td class="note">${esc(l.note||'')}</td></tr>`).join('')}
+</tbody></table></div>`;
+if(D.countries.length)h+=`<div class="two"><div style="display:grid;gap:12px;min-width:0"><h3>${U.countries}</h3><div class="list">${D.countries.map(c=>`<div class="li"><span>${esc(c.name)}</span><span class="n">${c.n} ${U.r} · ${U.median} ${fx(c.medX)}</span></div>`).join('')}</div></div>
+<div style="display:grid;gap:12px;align-content:start;min-width:0"><h3>${U.howto}</h3><p class="note">${esc(M.countriesNote)}</p></div></div>`;
+h+=`</section>`;}
+const formats=[...new Set(D.reels.map(r=>r.format).filter(Boolean))].sort();
+const topics=[...new Set(D.reels.map(r=>r.topic).filter(Boolean))].sort();
+const langs=Object.entries(D.reels.reduce((a,r)=>(a[r.lang]=(a[r.lang]||0)+1,a),{})).sort((a,b)=>b[1]-a[1]);
+const nflag=D.reels.filter(r=>r.f).length;
+h+=`<section id="top"><div><h2>${U.top}</h2><p class="sub">${esc(M.gridNote)}</p></div>
+<div class="controls"><label>${U.sort}</label><button class="chip" data-sort="x" aria-pressed="true">${U.by_x}</button><button class="chip" data-sort="plays" aria-pressed="false">${U.by_plays}</button>
+${langs.length>1?`<label for="fl" style="margin-left:10px">${U.lang}</label><select class="chip" id="fl"><option value="">${U.all_langs}</option>${langs.map(([c,n])=>`<option value="${esc(c)}">${esc(LN[c]||c)} (${n})</option>`).join('')}</select>`:''}
+<label for="ff" style="margin-left:10px">${U.format}</label><select class="chip" id="ff"><option value="">${U.all_formats}</option>${formats.map(f=>`<option>${esc(f)}</option>`).join('')}</select>
+<label for="ft" style="margin-left:10px">${U.topic}</label><select class="chip" id="ft"><option value="">${U.all_topics}</option>${topics.map(f=>`<option>${esc(f)}</option>`).join('')}</select>
+${nflag?`<button class="chip" id="flg" aria-pressed="false">${esc(M.flaggedLabel||U.flagged)} (${nflag})</button>`:''}
+<span class="count" id="cnt"></span></div>
+<div class="grid" id="grid"></div></section>`;
+if(D.ideas.length)h+=`<section><div><h2>${esc(M.ideasTitle)}</h2><p class="sub">${esc(M.ideasNote)}</p></div><div class="ideas">${D.ideas.map(i=>`<div class="idea"><h3>${esc(i.title)}</h3><p class="say">${U.hook}: <q>${esc(i.hook)}</q></p><p class="why">${esc(i.why)}</p>${i.refs&&i.refs.length?`<div class="refs">${i.refs.map((c,k)=>`<a href="${reel(c)}" target="_blank" rel="noopener">${U.example} ${k+1} ↗</a>`).join('')}</div>`:''}</div>`).join('')}</div></section>`;
+if(D.hooks.length)h+=`<section><div><h2>${U.hooks}</h2><p class="sub">${esc(M.hooksNote)}</p></div><div class="quotes">${D.hooks.map(q=>`<div class="quote"><p>${esc(q.tr||q.orig)}</p>${q.orig&&q.orig!==q.tr?`<p class="o">${esc(q.orig)}</p>`:''}<div class="src"><a href="${reel(q.code)}" target="_blank" rel="noopener">@${esc(q.user)}</a> · ${esc(LN[q.lang]||q.lang)} · ${fmt(q.plays)} ${U.views} · ${fx(q.x)}</div></div>`).join('')}</div></section>`;
+h+=`<section class="two"><div style="display:grid;gap:12px;align-content:start;min-width:0"><h2>${U.audio}</h2><p class="note">${esc(M.audioNote)}</p><div class="list">${D.audio.length?D.audio.map(a=>`<div class="li"><span>${esc(a.name)}</span><span class="n">${a.n} ${U.r} · ${fmt(a.plays)}</span></div>`).join(''):`<div class="li"><span class="empty">${U.no_audio}</span></div>`}</div></div>
+<div style="display:grid;gap:12px;align-content:start;min-width:0"><h2>${U.tags}</h2><p class="note">${esc(M.tagsNote)}</p><div class="list">${D.hashtags.map(a=>`<div class="li"><span>#${esc(a.tag)}</span><span class="n">${a.n} ${U.r} · ${U.median} ${fmt(a.med)}</span></div>`).join('')}</div></div></section>`;
+h+=`<section><div><h2>${U.method}</h2></div><div class="method">${M.method.map(m=>`<p>${m}</p>`).join('')}</div></section>`;
+app.innerHTML=h;
+let st={sort:'x',lang:'',fmt:'',topic:'',flag:false};
+function draw(){
+  let rs=D.reels.filter(r=>(st.flag||!r.f)&&(!st.lang||r.lang===st.lang)&&(!st.fmt||r.format===st.fmt)&&(!st.topic||r.topic===st.topic));
+  rs.sort((a,b)=>(b[st.sort]||0)-(a[st.sort]||0));
+  document.getElementById('cnt').textContent=rs.length+' '+U.r;
+  const g=document.getElementById('grid');
+  g.innerHTML=rs.length?rs.map(r=>`<a class="card" href="${esc(r.url)}" target="_blank" rel="noopener">
+   <div class="thumb" style="${r.thumb?`background-image:url(${r.thumb})`:''}">${r.x?`<span class="xbadge">${fx(r.x)}</span>`:''}<span class="lang">${esc(r.lang)}${r.cc?' · '+esc(r.cc):''}</span><span class="plays">▶ ${fmt(r.plays)}</span>${r.dur?`<span class="dur">${Math.round(r.dur)} ${U.sec}</span>`:''}</div>
+   <div class="cbody"><div class="who">@${esc(r.user)} · ${r.followers!=null?fmt(r.followers)+' '+U.followers:U.followers_na} · ${esc(r.date)}</div><div class="hook">${esc(r.hook)}</div>${r.orig?`<div class="orig">${esc(r.orig)}</div>`:''}
+   <div class="tags">${r.f?`<span class="tag w">${esc(r.f)}</span>`:''}${r.format?`<span class="tag t">${esc(r.format)}</span>`:''}${r.topic?`<span class="tag">${esc(r.topic)}</span>`:''}</div></div></a>`).join(''):`<p class="empty">${U.empty}</p>`;
+}
+document.querySelectorAll('[data-sort]').forEach(b=>b.onclick=()=>{st.sort=b.dataset.sort;document.querySelectorAll('[data-sort]').forEach(x=>x.setAttribute('aria-pressed',x===b));draw()});
+const on=(id,ev,fn)=>{const el=document.getElementById(id);if(el)el[ev]=fn};
+on('fl','onchange',e=>{st.lang=e.target.value;draw()});
+on('ff','onchange',e=>{st.fmt=e.target.value;draw()});
+on('ft','onchange',e=>{st.topic=e.target.value;draw()});
+on('flg','onclick',e=>{st.flag=!st.flag;e.currentTarget.setAttribute('aria-pressed',st.flag);draw()});
+draw();
+</script>

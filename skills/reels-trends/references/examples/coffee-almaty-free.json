@@ -1,0 +1,96 @@
+{
+ "_comment": "Small single-market study for a free Apify plan ($5 a month). The hashtag engine bills old posts too, so keep a 30-60 day window and give it many specific hashtags.",
+ "niche": "кофейни Алматы",
+ "report_language": "ru",
+ "budget_usd": 3,
+ "engine": "auto",
+ "search": {
+  "hashtag_results": 100,
+  "keyword_results": 40
+ },
+ "segments": {
+  "RU": {
+   "min_views": 2000,
+   "queries": [
+    [
+     "кофейня",
+     60
+    ],
+    [
+     "кофейня алматы",
+     60
+    ],
+    [
+     "латте арт",
+     60
+    ],
+    [
+     "бариста",
+     60
+    ]
+   ],
+   "hashtags": [
+    "кофейня",
+    "кофейняалматы",
+    "алматыкофе",
+    "латтеарт",
+    "бариста",
+    "кофе"
+   ]
+  },
+  "EN": {
+   "min_views": 10000,
+   "queries": [
+    [
+     "coffee shop almaty",
+     40
+    ],
+    [
+     "latte art",
+     40
+    ]
+   ],
+   "hashtags": [
+    "latteart",
+    "coffeeshop",
+    "baristalife"
+   ]
+  }
+ },
+ "relevance_regex": "coffee|кофе|кофейн|латте|latte|espresso|эспрессо|бариста|barista|капучино|cappuccino|кофехана",
+ "exclude_regex": "coffee table|журнальный столик",
+ "topics": [
+  [
+   "Латте-арт",
+   "latte ?art|латте ?арт|латтеарт"
+  ],
+  [
+   "Бариста за работой",
+   "barista|бариста"
+  ],
+  [
+   "Интерьер и атмосфера",
+   "interior|интерьер|уютн|cozy|атмосфер"
+  ],
+  [
+   "Десерты и еда",
+   "dessert|десерт|круассан|croissant|выпечк|cake|торт"
+  ]
+ ],
+ "fallback_topic": "Общее про кофейни",
+ "profiles": {
+  "floor_by_lang": {
+   "default": 2000
+  },
+  "max_authors": 300
+ },
+ "leaders": {
+  "top_x": 40,
+  "x_min_plays": 5000,
+  "top_plays": 15,
+  "per_author": 2,
+  "lang_quota_default": 8,
+  "lang_min_plays_default": 2000,
+  "lang_min_reels": 10
+ }
+}

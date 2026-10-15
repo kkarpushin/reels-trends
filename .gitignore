@@ -1,0 +1,5 @@
+reels-research/
+__pycache__/
+*.pyc
+.env
+.DS_Store

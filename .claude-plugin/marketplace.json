@@ -1,0 +1,12 @@
+{
+  "name": "kkarpushin",
+  "owner": { "name": "Konstantin Karpushin" },
+  "description": "Claude Code skills by Konstantin Karpushin",
+  "plugins": [
+    {
+      "name": "reels-trends",
+      "source": "./",
+      "description": "What goes viral on Instagram Reels in your niche: research and report"
+    }
+  ]
+}

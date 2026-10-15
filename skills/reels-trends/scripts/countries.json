@@ -1,0 +1,506 @@
+{
+"United States": [
+"US",
+"США"
+],
+"United Kingdom": [
+"GB",
+"Великобритания"
+],
+"Canada": [
+"CA",
+"Канада"
+],
+"Australia": [
+"AU",
+"Австралия"
+],
+"New Zealand": [
+"NZ",
+"Новая Зеландия"
+],
+"Ireland": [
+"IE",
+"Ирландия"
+],
+"India": [
+"IN",
+"Индия"
+],
+"Pakistan": [
+"PK",
+"Пакистан"
+],
+"Bangladesh": [
+"BD",
+"Бангладеш"
+],
+"Sri Lanka": [
+"LK",
+"Шри-Ланка"
+],
+"Nepal": [
+"NP",
+"Непал"
+],
+"Philippines": [
+"PH",
+"Филиппины"
+],
+"Indonesia": [
+"ID",
+"Индонезия"
+],
+"Malaysia": [
+"MY",
+"Малайзия"
+],
+"Singapore": [
+"SG",
+"Сингапур"
+],
+"Thailand": [
+"TH",
+"Таиланд"
+],
+"Vietnam": [
+"VN",
+"Вьетнам"
+],
+"Cambodia": [
+"KH",
+"Камбоджа"
+],
+"Japan": [
+"JP",
+"Япония"
+],
+"South Korea": [
+"KR",
+"Южная Корея"
+],
+"Korea": [
+"KR",
+"Южная Корея"
+],
+"China": [
+"CN",
+"Китай"
+],
+"Taiwan": [
+"TW",
+"Тайвань"
+],
+"Hong Kong": [
+"HK",
+"Гонконг"
+],
+"United Arab Emirates": [
+"AE",
+"ОАЭ"
+],
+"Saudi Arabia": [
+"SA",
+"Саудовская Аравия"
+],
+"Qatar": [
+"QA",
+"Катар"
+],
+"Kuwait": [
+"KW",
+"Кувейт"
+],
+"Bahrain": [
+"BH",
+"Бахрейн"
+],
+"Oman": [
+"OM",
+"Оман"
+],
+"Egypt": [
+"EG",
+"Египет"
+],
+"Morocco": [
+"MA",
+"Марокко"
+],
+"Algeria": [
+"DZ",
+"Алжир"
+],
+"Tunisia": [
+"TN",
+"Тунис"
+],
+"Jordan": [
+"JO",
+"Иордания"
+],
+"Lebanon": [
+"LB",
+"Ливан"
+],
+"Iraq": [
+"IQ",
+"Ирак"
+],
+"Iran": [
+"IR",
+"Иран"
+],
+"Israel": [
+"IL",
+"Израиль"
+],
+"Turkey": [
+"TR",
+"Турция"
+],
+"Türkiye": [
+"TR",
+"Турция"
+],
+"Russia": [
+"RU",
+"Россия"
+],
+"Ukraine": [
+"UA",
+"Украина"
+],
+"Belarus": [
+"BY",
+"Беларусь"
+],
+"Kazakhstan": [
+"KZ",
+"Казахстан"
+],
+"Uzbekistan": [
+"UZ",
+"Узбекистан"
+],
+"Kyrgyzstan": [
+"KG",
+"Кыргызстан"
+],
+"Georgia": [
+"GE",
+"Грузия"
+],
+"Armenia": [
+"AM",
+"Армения"
+],
+"Azerbaijan": [
+"AZ",
+"Азербайджан"
+],
+"Moldova": [
+"MD",
+"Молдова"
+],
+"Poland": [
+"PL",
+"Польша"
+],
+"Germany": [
+"DE",
+"Германия"
+],
+"Austria": [
+"AT",
+"Австрия"
+],
+"Switzerland": [
+"CH",
+"Швейцария"
+],
+"France": [
+"FR",
+"Франция"
+],
+"Belgium": [
+"BE",
+"Бельгия"
+],
+"Netherlands": [
+"NL",
+"Нидерланды"
+],
+"Luxembourg": [
+"LU",
+"Люксембург"
+],
+"Italy": [
+"IT",
+"Италия"
+],
+"Spain": [
+"ES",
+"Испания"
+],
+"Portugal": [
+"PT",
+"Португалия"
+],
+"Greece": [
+"GR",
+"Греция"
+],
+"Cyprus": [
+"CY",
+"Кипр"
+],
+"Romania": [
+"RO",
+"Румыния"
+],
+"Bulgaria": [
+"BG",
+"Болгария"
+],
+"Serbia": [
+"RS",
+"Сербия"
+],
+"Croatia": [
+"HR",
+"Хорватия"
+],
+"Slovenia": [
+"SI",
+"Словения"
+],
+"Bosnia and Herzegovina": [
+"BA",
+"Босния и Герцеговина"
+],
+"Montenegro": [
+"ME",
+"Черногория"
+],
+"Albania": [
+"AL",
+"Албания"
+],
+"North Macedonia": [
+"MK",
+"Северная Македония"
+],
+"Hungary": [
+"HU",
+"Венгрия"
+],
+"Czech Republic": [
+"CZ",
+"Чехия"
+],
+"Czechia": [
+"CZ",
+"Чехия"
+],
+"Slovakia": [
+"SK",
+"Словакия"
+],
+"Lithuania": [
+"LT",
+"Литва"
+],
+"Latvia": [
+"LV",
+"Латвия"
+],
+"Estonia": [
+"EE",
+"Эстония"
+],
+"Finland": [
+"FI",
+"Финляндия"
+],
+"Sweden": [
+"SE",
+"Швеция"
+],
+"Norway": [
+"NO",
+"Норвегия"
+],
+"Denmark": [
+"DK",
+"Дания"
+],
+"Iceland": [
+"IS",
+"Исландия"
+],
+"Mexico": [
+"MX",
+"Мексика"
+],
+"Guatemala": [
+"GT",
+"Гватемала"
+],
+"Honduras": [
+"HN",
+"Гондурас"
+],
+"El Salvador": [
+"SV",
+"Сальвадор"
+],
+"Nicaragua": [
+"NI",
+"Никарагуа"
+],
+"Costa Rica": [
+"CR",
+"Коста-Рика"
+],
+"Panama": [
+"PA",
+"Панама"
+],
+"Cuba": [
+"CU",
+"Куба"
+],
+"Dominican Republic": [
+"DO",
+"Доминиканская Республика"
+],
+"Puerto Rico": [
+"PR",
+"Пуэрто-Рико"
+],
+"Colombia": [
+"CO",
+"Колумбия"
+],
+"Venezuela": [
+"VE",
+"Венесуэла"
+],
+"Ecuador": [
+"EC",
+"Эквадор"
+],
+"Peru": [
+"PE",
+"Перу"
+],
+"Bolivia": [
+"BO",
+"Боливия"
+],
+"Chile": [
+"CL",
+"Чили"
+],
+"Argentina": [
+"AR",
+"Аргентина"
+],
+"Uruguay": [
+"UY",
+"Уругвай"
+],
+"Paraguay": [
+"PY",
+"Парагвай"
+],
+"Brazil": [
+"BR",
+"Бразилия"
+],
+"Nigeria": [
+"NG",
+"Нигерия"
+],
+"Ghana": [
+"GH",
+"Гана"
+],
+"Kenya": [
+"KE",
+"Кения"
+],
+"South Africa": [
+"ZA",
+"ЮАР"
+],
+"Ethiopia": [
+"ET",
+"Эфиопия"
+],
+"Tanzania": [
+"TZ",
+"Танзания"
+],
+"Uganda": [
+"UG",
+"Уганда"
+],
+"Jamaica": [
+"JM",
+"Ямайка"
+],
+"Trinidad and Tobago": [
+"TT",
+"Тринидад и Тобаго"
+],
+"Mongolia": [
+"MN",
+"Монголия"
+],
+"Myanmar": [
+"MM",
+"Мьянма"
+],
+"Laos": [
+"LA",
+"Лаос"
+],
+"Macau": [
+"MO",
+"Макао"
+],
+"Afghanistan": [
+"AF",
+"Афганистан"
+],
+"Syria": [
+"SY",
+"Сирия"
+],
+"Libya": [
+"LY",
+"Ливия"
+],
+"Yemen": [
+"YE",
+"Йемен"
+],
+"Malta": [
+"MT",
+"Мальта"
+],
+"Monaco": [
+"MC",
+"Монако"
+],
+"Tajikistan": [
+"TJ",
+"Таджикистан"
+],
+"Turkmenistan": [
+"TM",
+"Туркменистан"
+]
+}

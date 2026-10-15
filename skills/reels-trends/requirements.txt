@@ -1,0 +1,2 @@
+lingua-language-detector>=2.0
+pillow>=10.0

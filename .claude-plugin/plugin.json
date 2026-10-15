@@ -1,0 +1,8 @@
+{
+  "name": "reels-trends",
+  "description": "Find what goes viral on Instagram Reels in any niche, market and period: Apify search in many languages, the x-to-author-median metric, format labels from video frames and an HTML report with ready-to-shoot ideas.",
+  "version": "1.0.0",
+  "author": { "name": "Konstantin Karpushin" },
+  "license": "MIT",
+  "repository": "https://github.com/kkarpushin/reels-trends"
+}

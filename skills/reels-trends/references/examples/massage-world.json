@@ -1,0 +1,764 @@
+{
+ "_comment": "Real config of the worldwide massage study (15.09-15.10.2026): 19 languages, 144 queries, 5 308 reels kept, $13.38 on a paid Apify plan. Change niche, dates, queries, regexes and topics for your own study.",
+ "niche": "массажные салоны и массажисты, весь мир",
+ "report_language": "ru",
+ "date_from": "2026-09-15",
+ "date_to": "2026-10-15",
+ "budget_usd": 15,
+ "segments": {
+  "EN": {
+   "min_views": 10000,
+   "queries": [
+    [
+     "massage",
+     120
+    ],
+    [
+     "massage therapist",
+     120
+    ],
+    [
+     "massage therapy",
+     120
+    ],
+    [
+     "head spa",
+     120
+    ],
+    [
+     "lymphatic drainage",
+     120
+    ],
+    [
+     "deep tissue massage",
+     120
+    ],
+    [
+     "asmr massage",
+     120
+    ],
+    [
+     "sports massage",
+     60
+    ],
+    [
+     "thai massage",
+     60
+    ],
+    [
+     "japanese head spa",
+     60
+    ],
+    [
+     "scalp massage",
+     60
+    ],
+    [
+     "facial massage",
+     60
+    ],
+    [
+     "gua sha",
+     60
+    ],
+    [
+     "cupping therapy",
+     60
+    ],
+    [
+     "hot stone massage",
+     60
+    ],
+    [
+     "foot massage",
+     60
+    ],
+    [
+     "reflexology",
+     60
+    ],
+    [
+     "back massage",
+     60
+    ],
+    [
+     "neck massage",
+     60
+    ],
+    [
+     "relaxing massage",
+     60
+    ],
+    [
+     "massage spa",
+     60
+    ],
+    [
+     "couples massage",
+     60
+    ],
+    [
+     "prenatal massage",
+     60
+    ],
+    [
+     "myofascial release",
+     60
+    ],
+    [
+     "massage techniques",
+     60
+    ],
+    [
+     "massage therapist life",
+     60
+    ],
+    [
+     "balinese massage",
+     60
+    ],
+    [
+     "kobido",
+     60
+    ],
+    [
+     "buccal massage",
+     60
+    ],
+    [
+     "lomi lomi",
+     60
+    ],
+    [
+     "shiatsu",
+     60
+    ],
+    [
+     "body massage",
+     60
+    ],
+    [
+     "trigger point",
+     60
+    ],
+    [
+     "ayurvedic massage",
+     60
+    ],
+    [
+     "massage clinic",
+     60
+    ],
+    [
+     "massage studio",
+     60
+    ]
+   ]
+  },
+  "ES": {
+   "min_views": 5000,
+   "queries": [
+    [
+     "masaje",
+     120
+    ],
+    [
+     "masajes",
+     120
+    ],
+    [
+     "drenaje linfático",
+     120
+    ],
+    [
+     "masajista",
+     60
+    ],
+    [
+     "masaje relajante",
+     60
+    ],
+    [
+     "masaje descontracturante",
+     60
+    ],
+    [
+     "maderoterapia",
+     60
+    ],
+    [
+     "masaje deportivo",
+     60
+    ],
+    [
+     "masaje facial",
+     60
+    ],
+    [
+     "spa masajes",
+     60
+    ],
+    [
+     "masoterapia",
+     60
+    ],
+    [
+     "reflexología",
+     60
+    ],
+    [
+     "masaje tailandés",
+     60
+    ]
+   ]
+  },
+  "PT": {
+   "min_views": 5000,
+   "queries": [
+    [
+     "massagem",
+     120
+    ],
+    [
+     "drenagem linfática",
+     120
+    ],
+    [
+     "massoterapia",
+     120
+    ],
+    [
+     "massoterapeuta",
+     60
+    ],
+    [
+     "massagem relaxante",
+     60
+    ],
+    [
+     "massagem modeladora",
+     60
+    ],
+    [
+     "ventosaterapia",
+     60
+    ],
+    [
+     "liberação miofascial",
+     60
+    ],
+    [
+     "quick massage",
+     60
+    ],
+    [
+     "massagem facial",
+     60
+    ],
+    [
+     "spa massagem",
+     60
+    ]
+   ]
+  },
+  "RU": {
+   "min_views": 3000,
+   "queries": [
+    [
+     "массаж",
+     100
+    ],
+    [
+     "лимфодренажный массаж",
+     100
+    ],
+    [
+     "массажист",
+     60
+    ],
+    [
+     "массаж спины",
+     60
+    ],
+    [
+     "антицеллюлитный массаж",
+     60
+    ],
+    [
+     "массаж лица",
+     60
+    ],
+    [
+     "буккальный массаж",
+     60
+    ],
+    [
+     "массажный салон",
+     60
+    ],
+    [
+     "спа массаж",
+     60
+    ],
+    [
+     "тайский массаж",
+     60
+    ],
+    [
+     "массаж шеи",
+     60
+    ],
+    [
+     "спортивный массаж",
+     60
+    ],
+    [
+     "массаж головы",
+     60
+    ],
+    [
+     "моделирующий массаж",
+     60
+    ],
+    [
+     "хэд спа",
+     60
+    ],
+    [
+     "хед спа",
+     60
+    ],
+    [
+     "хэдспа",
+     60
+    ],
+    [
+     "японский массаж головы",
+     60
+    ],
+    [
+     "спа для головы",
+     60
+    ]
+   ]
+  },
+  "UA": {
+   "min_views": 1000,
+   "queries": [
+    [
+     "масаж",
+     100
+    ],
+    [
+     "масажист",
+     50
+    ],
+    [
+     "масаж спини",
+     50
+    ],
+    [
+     "лімфодренажний масаж",
+     50
+    ],
+    [
+     "масаж обличчя",
+     50
+    ],
+    [
+     "масажний салон",
+     50
+    ],
+    [
+     "антицелюлітний масаж",
+     50
+    ],
+    [
+     "масаж голови",
+     50
+    ],
+    [
+     "хед спа",
+     60
+    ],
+    [
+     "хедспа",
+     60
+    ],
+    [
+     "японський масаж голови",
+     60
+    ],
+    [
+     "спа для голови",
+     60
+    ]
+   ]
+  },
+  "TR": {
+   "min_views": 3000,
+   "queries": [
+    [
+     "masaj",
+     60
+    ],
+    [
+     "masaj terapisti",
+     60
+    ],
+    [
+     "masaj salonu",
+     60
+    ],
+    [
+     "lenf drenaj",
+     60
+    ],
+    [
+     "spa masaj",
+     60
+    ],
+    [
+     "bali masajı",
+     60
+    ]
+   ]
+  },
+  "DE": {
+   "min_views": 2000,
+   "queries": [
+    [
+     "massagepraxis",
+     60
+    ],
+    [
+     "rückenmassage",
+     60
+    ],
+    [
+     "lymphdrainage",
+     60
+    ],
+    [
+     "massagetherapeut",
+     60
+    ],
+    [
+     "entspannungsmassage",
+     60
+    ]
+   ]
+  },
+  "FR": {
+   "min_views": 2000,
+   "queries": [
+    [
+     "massage relaxant",
+     60
+    ],
+    [
+     "drainage lymphatique",
+     60
+    ],
+    [
+     "massothérapeute",
+     60
+    ],
+    [
+     "massage bien-être",
+     60
+    ]
+   ]
+  },
+  "IT": {
+   "min_views": 3000,
+   "queries": [
+    [
+     "massaggio",
+     60
+    ],
+    [
+     "massaggi",
+     60
+    ],
+    [
+     "massaggiatore",
+     60
+    ],
+    [
+     "linfodrenaggio",
+     60
+    ],
+    [
+     "massaggio rilassante",
+     60
+    ]
+   ]
+  },
+  "PL": {
+   "min_views": 1000,
+   "queries": [
+    [
+     "masaż",
+     50
+    ],
+    [
+     "masażysta",
+     50
+    ],
+    [
+     "drenaż limfatyczny",
+     50
+    ]
+   ]
+  },
+  "NL": {
+   "min_views": 1000,
+   "queries": [
+    [
+     "massagesalon",
+     40
+    ],
+    [
+     "massagepraktijk",
+     40
+    ]
+   ]
+  },
+  "ID": {
+   "min_views": 3000,
+   "queries": [
+    [
+     "pijat",
+     60
+    ],
+    [
+     "pijat refleksi",
+     60
+    ],
+    [
+     "pijat bali",
+     60
+    ],
+    [
+     "spa bali",
+     60
+    ],
+    [
+     "pijat tradisional",
+     60
+    ]
+   ]
+  },
+  "TH": {
+   "min_views": 2000,
+   "queries": [
+    [
+     "นวด",
+     50
+    ],
+    [
+     "นวดแผนไทย",
+     50
+    ],
+    [
+     "นวดน้ำมัน",
+     50
+    ]
+   ]
+  },
+  "VI": {
+   "min_views": 3000,
+   "queries": [
+    [
+     "mát xa",
+     60
+    ],
+    [
+     "gội đầu dưỡng sinh",
+     60
+    ],
+    [
+     "spa dưỡng sinh",
+     60
+    ],
+    [
+     "bấm huyệt",
+     60
+    ]
+   ]
+  },
+  "JA": {
+   "min_views": 2000,
+   "queries": [
+    [
+     "マッサージ",
+     60
+    ],
+    [
+     "整体",
+     60
+    ],
+    [
+     "ヘッドスパ",
+     60
+    ],
+    [
+     "リンパマッサージ",
+     60
+    ]
+   ]
+  },
+  "KO": {
+   "min_views": 2000,
+   "queries": [
+    [
+     "마사지",
+     60
+    ],
+    [
+     "경락마사지",
+     60
+    ],
+    [
+     "헤드스파",
+     60
+    ],
+    [
+     "스웨디시",
+     60
+    ]
+   ]
+  },
+  "ZH": {
+   "min_views": 1000,
+   "queries": [
+    [
+     "按摩",
+     50
+    ],
+    [
+     "推拿",
+     50
+    ],
+    [
+     "頭療",
+     50
+    ]
+   ]
+  },
+  "AR": {
+   "min_views": 3000,
+   "queries": [
+    [
+     "مساج",
+     60
+    ],
+    [
+     "تدليك",
+     60
+    ],
+    [
+     "مساج استرخائي",
+     60
+    ]
+   ]
+  },
+  "FA": {
+   "min_views": 3000,
+   "queries": [
+    [
+     "ماساژ",
+     50
+    ],
+    [
+     "ماساژور",
+     50
+    ]
+   ]
+  }
+ },
+ "relevance_regex": "massag|masaj|masaż|masaz|massaggi|massagem|masaje|masajist|masoterap|massoterap|massotherap|massothérap|массаж|масаж|lymph|linfát|linfat|linfodren|drenaj|drenagem|drenaje|drenaż|лимфодренаж|лімфодренаж|リンパ|head ?spa|hair ?spa|ヘッドスパ|헤드스파|頭療|头疗|gội đầu|goi dau|mát ?xa|mat ?xa|pijat|\\burut\\b|refleksi|reflexolog|reflexoterap|refleksoloji|рефлексотерап|shiatsu|шиацу|tui ?na|推拿|按摩|マッサージ|整体|もみほぐし|마사지|경락|스웨디시|นวด|مساج|ماساژ|تدليك|gua ?sha|гуаша|гуа-ша|cupping|ventosaterap|hijama|хиджам|kobido|кобидо|buccal|буккал|maderoterap|myofasc|miofasc|миофасц|deep ?tissue|lomi ?lomi|abhyanga|ayurved|аюрвед|bodywork|trigger ?point|iastm|kerokan|bấm huyệt|modeladora|massoterapeut|masseur|masseuse|massör|masör|массажист|масажист",
+ "exclude_regex": "nuru|happy ?ending|erotic|erótic|eròtic|érotiq|эрот|интим|інтим|tantra|тантр|body ?to ?body|\\bb2b\\b|sensual|сенсуал|onlyfans|only ?fans|\\bxxx\\b|escort|эскорт|sexy|seks|\\bsexo\\b|سکس|\\b18\\+",
+ "topics": [
+  [
+   "Животные",
+   "\\b(dog|dogs|puppy|cat|cats|kitten|horse|собак\\w*|пёс|пес|кот|котик\\w*|кошк\\w*|perro\\w*|perrit\\w*|gato\\w*|gatit\\w*|cachorr\\w*|hund\\w*|katze\\w*|cane|gatto|anjing|kucing|pferd\\w*|лошад\\w*)\\b|강아지|고양이|猫|犬"
+  ],
+  [
+   "Массажёры и гаджеты",
+   "massage ?gun|massager|massageador|masajeador|массаж[её]р|масажер|massagegerät|theragun|hypervolt|massage chair|massagesessel|массажное кресло|silla de masaje|cadeira de massagem|tiktok ?shop|\\bamazon\\b|\\btemu\\b|aliexpress|マッサージ機|マッサージガン|안마기|마사지건|按摩椅"
+  ],
+  [
+   "Беременные и дети",
+   "prenatal|pregnan|беременн|вагітн|embaraz|gestante|gravidan|grávida|schwanger|incinta|hamil|baby ?massage|massagem (em|para) beb|masaje (para |infantil|a beb)|детск\\w* массаж|дитяч\\w* масаж|массаж (для )?(ребен|малыш|младен|груднич)|pijat bayi|bebek masaj|ベビーマッサージ|산전|임산부"
+  ],
+  [
+   "Head spa и массаж головы",
+   "head ?spa|hair ?spa|scalp|ヘッドスパ|헤드스파|頭療|头疗|gội đầu|goi dau|массаж головы|масаж голови|cuero cabelludo|couro cabeludo|kopfmassage|massaggio (alla )?testa|masaż głowy|champi|spa capilar|capillaire|kafa masajı|頭皮|두피"
+  ],
+  [
+   "Лицо: кобидо, буккальный, гуаша",
+   "facial|face ?massage|face ?lift|faceyoga|face ?yoga|kobido|кобидо|buccal|буккал|gua ?sha|гуаша|гуа-ша|массаж лица|масаж обличчя|лица|обличчя|masaje facial|massagem facial|massage (du )?visage|gesichtsmassage|massaggio viso|masaż twarzy|yüz masajı|小顔|美顔|괄사|경락|얼굴|ansikt|lifting (facial|du visage|viso|de rosto)|лифтинг|ліфтинг"
+  ],
+  [
+   "Лимфодренаж и коррекция фигуры",
+   "lymph|linfát|linfat|linfodren|drenaj|drenagem|drenaje|drenaż|лимфодренаж|лімфодренаж|リンパ|림프|maderoterap|madero|modeladora|modelador|моделирующ|моделюю|антицеллюлит|антицелюліт|cellulit|celulit|body ?contour|contorno|reductiv|reductor|post ?op|pós[- ]?operat|post[- ]?operat|lipo|vacuum|вакуумн|скульпт|sculpt|bloating|отёк|отек|набряк|hinchaz|inchaço|retenção|retención|ödem"
+  ],
+  [
+   "Банки и скрейпинг",
+   "cupping|ventosa|ventouse|hijama|хиджам|банк\\w*|scraping|iastm|kerokan|cạo gió|schröpf|coppettazione|bańki|kupa masajı|부항|カッピング"
+  ],
+  [
+   "Стопы и рефлексология",
+   "\\bfoot\\b|\\bfeet\\b|reflexolog|reflexoterap|refleksi|refleksoloji|рефлексотерап|стоп[аыуе]?\\b|ступн|\\bpies\\b|\\bpés\\b|\\bpieds\\b|fußmassage|füße|piedi|stopy|stóp|ayak|足つぼ|足裏|발마사지|เท้า|bàn chân|pedicur|pedicure"
+  ],
+  [
+   "Тайский, балийский и восточные практики",
+   "\\bthai\\b|thai ?massage|тайск|tailand|นวดแผนไทย|bali|balines|балийск|lomi|abhyanga|ayurved|аюрвед|shiatsu|шиацу|tui ?na|推拿|туйна|indian head|kerala|marma|pijat tradisional|pijat refleksi|traditional massage|chinese massage|китайск\\w* массаж|整体|経絡|bấm huyệt|dưỡng sinh|\\burut\\b|javanese|khmer|burmese|filipino|hilot|kahuna|hawaiian"
+  ],
+  [
+   "Лечебный и глубокий: боль, спорт, осанка",
+   "deep ?tissue|sports? ?massage|спортивн\\w* массаж|спортивн\\w* масаж|masaje deportivo|massagem esportiva|sportmassage|trigger ?point|триггер|myofasc|miofasc|миофасц|knots?\\b|contractur|descontract|contratur|\\bpain\\b|dolor|\\bdor(es)?\\b|боль|болит|біль|болить|scolio|сколиоз|escolios|posture|осанк|постав|therapeutic|лечебн|лікувальн|medical massage|кинезио|physio|fisio|sciatica|ишиас|ciática|hernia|грыж|rehab|реабилит|реабіліт|recovery|восстановлен|injur|травм|lesión|lesão|torticol|migraine|migraña|enxaqueca|мигрен|мігрен|headache|головн\\w* бол"
+  ],
+  [
+   "Расслабляющий и СПА-ритуал",
+   "relax|расслаб|розслаб|relaj|rilass|entspann|odpręż|hot ?stone|piedras|pedras|камн|stone massage|aroma|арома|ritual|ритуал|couples|для двоих|в четыре руки|four hands|4 hands|4 manos|4 mãos|4 mani|swedish|шведск|스웨디시|นวดน้ำมัน|spa\\b|спа\\b|wellness|bienestar|bem-estar|benessere|asmr|асмр"
+  ]
+ ],
+ "fallback_topic": "Общее про массаж и массажистов",
+ "profiles": {
+  "floor_by_lang": {
+   "EN": 30000,
+   "ES": 15000,
+   "PT": 15000,
+   "RU": 8000,
+   "UA": 3000,
+   "xx": 30000,
+   "default": 8000
+  },
+  "max_authors": 2500
+ },
+ "leaders": {
+  "top_x": 120,
+  "x_min_plays": 20000,
+  "top_plays": 40,
+  "per_author": 3,
+  "lang_quota": {
+   "EN": 12,
+   "ES": 12,
+   "PT": 12,
+   "RU": 12,
+   "UA": 10
+  },
+  "lang_quota_default": 7,
+  "lang_min_plays": {
+   "UA": 2000
+  },
+  "lang_min_plays_default": 5000,
+  "lang_min_reels": 15
+ },
+ "focus_topics": [
+  "Head spa и массаж головы"
+ ]
+}
